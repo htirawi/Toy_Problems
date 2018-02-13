@@ -1,13 +1,22 @@
 	// 1) 'absAll' create function that accept array as input and check the element 
     //     if it's negative make it positive 
     function each(array, func) {
-        for (var i = 0; i < array.length; i++) {
-          func(array[i]);
-        }
+    	for (var i = 0; i < array.length; i++) {
+    		func(array[i]);
+    	}
     }
-	function absAll(array) {
-	 //your code here
-	}
+    function absAll(array) {
+    	each(array,absolute);
+    }
+
+    var absolute = function(x){
+    	if(x < 0){
+    		return -x;
+    	}
+    	else{
+    		return x;
+    	}
+    }
 
 	/*
 	2) using improved each write function that multiply each element in array with
@@ -15,13 +24,21 @@
 
 	 var x = [2, 4, 6, 8, 10, 12, 14, 16]
 		multiplyOfFour(x);  => [16, 64 , 256] 
-    */
-   
-    function each(array, func) {
-        for (var i = 0; i < array.length; i++) {
-            func(array[i], i);
-        }
-    }
-	function multiplyOfFour(array) {
-	    //your code here
-	}
+		*/
+
+		function each(array, func) {
+			for (var i = 0; i < array.length; i++) {
+				func(array[i], i);
+			}
+		}
+		function multiplyOfFour(array) {
+			each(array,multiple);
+		}
+
+		var arr = [];
+		function multiple(number){
+			if(number%4 === 0){
+				arr.push(number)
+			}
+			console.log(arr);
+		}
