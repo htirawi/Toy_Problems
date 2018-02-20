@@ -40,7 +40,7 @@ function makeGame(upperbound){
 	obj.giveUp = giveUp;
 	obj.numOfGuesses = numOfGuesses;
 }
-
+//jhhfhtf
 var randInt = function(n){
 	return Math.floor(Math.random() * (n + 1));
 }
