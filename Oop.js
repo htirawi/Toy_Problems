@@ -39,6 +39,7 @@ function makeGame(upperbound){
 	obj.guessMyNumber = guessMyNumber;
 	obj.giveUp = giveUp;
 	obj.numOfGuesses = numOfGuesses;
+	return obj;
 }
 //jhhfhtf
 var randInt = function(n){
@@ -46,7 +47,7 @@ var randInt = function(n){
 }
 
 var guessMyNumber = function(n){
-	counter++;
+	this.counter++;
 	if (n > this.upper) {
 		return "Out of bounds! Please try a number between 0 and " + this.upperbound + ".";
 	} else if (n === this.rand) {
@@ -60,5 +61,5 @@ var giveUp=function(){
 }
 
 var numOfGuesses = function(){
-	return counter;
+	return this.counter;
 }
