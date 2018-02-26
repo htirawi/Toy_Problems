@@ -5,15 +5,31 @@
 //  nextItem([1, 2, 3, 4, 5, 6, 7], 3) # 4
 //  nextItem("testing", "t") # "e"
 
-	function nextItem(items, elem){
-		//your code is here
+function nextItem(items, elem){
+	if(Array.isArray(items)){
+		if(items.includes(elem)){
+			return elem+1;
+		}
 	}
+
+	else{
+		for(var i = 0 ; i < items.length;i++){
+			if(items[i] === elem){
+				return items[i+1]
+			}
+		}
+	}
+}
 
 //  We need a function that can transform a number into a string.
 // 	What ways of achieving this do you know?
 // 	numberToString(123); // returns '123';`   
 // 	numberToString(999); // returns '999';`
 
-	function numberToString(num) {
-	  //your code is here
-	}
+function numberToString(num) {
+	//first One
+	// return ""+num;
+	//Second one
+	return num.toString();
+}
+
